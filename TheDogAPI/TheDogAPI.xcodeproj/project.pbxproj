@@ -9,14 +9,22 @@
 /* Begin PBXBuildFile section */
 		CD1736282A73E940006B0A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1736272A73E940006B0A20 /* AppDelegate.swift */; };
 		CD17362A2A73E940006B0A20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1736292A73E940006B0A20 /* SceneDelegate.swift */; };
-		CD17362C2A73E940006B0A20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD17362B2A73E940006B0A20 /* ViewController.swift */; };
-		CD17362F2A73E940006B0A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD17362D2A73E940006B0A20 /* Main.storyboard */; };
+		CD17362C2A73E940006B0A20 /* DogListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD17362B2A73E940006B0A20 /* DogListViewController.swift */; };
 		CD1736322A73E940006B0A20 /* TheDogAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD1736302A73E940006B0A20 /* TheDogAPI.xcdatamodeld */; };
 		CD1736342A73E941006B0A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1736332A73E941006B0A20 /* Assets.xcassets */; };
 		CD1736372A73E941006B0A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1736352A73E941006B0A20 /* LaunchScreen.storyboard */; };
 		CD1736422A73E942006B0A20 /* TheDogAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1736412A73E942006B0A20 /* TheDogAPITests.swift */; };
 		CD17364C2A73E942006B0A20 /* TheDogAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD17364B2A73E942006B0A20 /* TheDogAPIUITests.swift */; };
 		CD17364E2A73E942006B0A20 /* TheDogAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD17364D2A73E942006B0A20 /* TheDogAPIUITestsLaunchTests.swift */; };
+		CD7C00602A7AABD400F4BBC3 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C005F2A7AABD400F4BBC3 /* Dog.swift */; };
+		CD7C006C2A7AB6FA00F4BBC3 /* DogListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C006B2A7AB6FA00F4BBC3 /* DogListPresenter.swift */; };
+		CD7C006E2A7AB7F300F4BBC3 /* DogListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C006D2A7AB7F300F4BBC3 /* DogListInteractor.swift */; };
+		CD7C00702A7AB85900F4BBC3 /* DogListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C006F2A7AB85900F4BBC3 /* DogListRouter.swift */; };
+		CD7C00732A7ABA0700F4BBC3 /* DogListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C00722A7ABA0700F4BBC3 /* DogListDataSource.swift */; };
+		CD7C00752A7ACB1100F4BBC3 /* DogsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C00742A7ACB1100F4BBC3 /* DogsRepository.swift */; };
+		CD8515932A7D261F00A88139 /* DogListAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8515922A7D261F00A88139 /* DogListAssembler.swift */; };
+		CD8515992A81362000A88139 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8515982A81362000A88139 /* UIImageView+Extensions.swift */; };
+		CD85159B2A81363F00A88139 /* BreedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD85159A2A81363F00A88139 /* BreedCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +48,7 @@
 		CD1736242A73E940006B0A20 /* TheDogAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheDogAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1736272A73E940006B0A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD1736292A73E940006B0A20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CD17362B2A73E940006B0A20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CD17362E2A73E940006B0A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD17362B2A73E940006B0A20 /* DogListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewController.swift; sourceTree = "<group>"; };
 		CD1736312A73E940006B0A20 /* TheDogAPI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheDogAPI.xcdatamodel; sourceTree = "<group>"; };
 		CD1736332A73E941006B0A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD1736362A73E941006B0A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +58,15 @@
 		CD1736472A73E942006B0A20 /* TheDogAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheDogAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD17364B2A73E942006B0A20 /* TheDogAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDogAPIUITests.swift; sourceTree = "<group>"; };
 		CD17364D2A73E942006B0A20 /* TheDogAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDogAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CD7C005F2A7AABD400F4BBC3 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		CD7C006B2A7AB6FA00F4BBC3 /* DogListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListPresenter.swift; sourceTree = "<group>"; };
+		CD7C006D2A7AB7F300F4BBC3 /* DogListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListInteractor.swift; sourceTree = "<group>"; };
+		CD7C006F2A7AB85900F4BBC3 /* DogListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListRouter.swift; sourceTree = "<group>"; };
+		CD7C00722A7ABA0700F4BBC3 /* DogListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListDataSource.swift; sourceTree = "<group>"; };
+		CD7C00742A7ACB1100F4BBC3 /* DogsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsRepository.swift; sourceTree = "<group>"; };
+		CD8515922A7D261F00A88139 /* DogListAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListAssembler.swift; sourceTree = "<group>"; };
+		CD8515982A81362000A88139 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		CD85159A2A81363F00A88139 /* BreedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +117,9 @@
 		CD1736262A73E940006B0A20 /* TheDogAPI */ = {
 			isa = PBXGroup;
 			children = (
+				CD17365B2A73F158006B0A20 /* API */,
 				CD1736272A73E940006B0A20 /* AppDelegate.swift */,
 				CD1736292A73E940006B0A20 /* SceneDelegate.swift */,
-				CD17362B2A73E940006B0A20 /* ViewController.swift */,
-				CD17362D2A73E940006B0A20 /* Main.storyboard */,
 				CD1736332A73E941006B0A20 /* Assets.xcassets */,
 				CD1736352A73E941006B0A20 /* LaunchScreen.storyboard */,
 				CD1736382A73E941006B0A20 /* Info.plist */,
@@ -128,6 +143,135 @@
 				CD17364D2A73E942006B0A20 /* TheDogAPIUITestsLaunchTests.swift */,
 			);
 			path = TheDogAPIUITests;
+			sourceTree = "<group>";
+		};
+		CD17365A2A73F151006B0A20 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CD8515952A81309F00A88139 /* Utilities */,
+				CD7C00612A7AAC9700F4BBC3 /* DogList */,
+				CD8515942A7ECF5200A88139 /* DogDetail */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CD17365B2A73F158006B0A20 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CD17365A2A73F151006B0A20 /* Scenes */,
+				CD17365D2A73F169006B0A20 /* Model */,
+				CD17365C2A73F162006B0A20 /* Repository */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CD17365C2A73F162006B0A20 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C00742A7ACB1100F4BBC3 /* DogsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CD17365D2A73F169006B0A20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C005F2A7AABD400F4BBC3 /* Dog.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD7C00612A7AAC9700F4BBC3 /* DogList */ = {
+			isa = PBXGroup;
+			children = (
+				CD8515912A7D260000A88139 /* Assembler */,
+				CD7C00712A7AB9F700F4BBC3 /* DataSource */,
+				CD7C00672A7AADA000F4BBC3 /* Router */,
+				CD7C00662A7AAD9A00F4BBC3 /* Presenter */,
+				CD7C00652A7AAD9300F4BBC3 /* Interactor */,
+				CD7C00622A7AACA700F4BBC3 /* ViewController */,
+			);
+			path = DogList;
+			sourceTree = "<group>";
+		};
+		CD7C00622A7AACA700F4BBC3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD17362B2A73E940006B0A20 /* DogListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CD7C00652A7AAD9300F4BBC3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C006D2A7AB7F300F4BBC3 /* DogListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CD7C00662A7AAD9A00F4BBC3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C006B2A7AB6FA00F4BBC3 /* DogListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CD7C00672A7AADA000F4BBC3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C006F2A7AB85900F4BBC3 /* DogListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CD7C00712A7AB9F700F4BBC3 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C00722A7ABA0700F4BBC3 /* DogListDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		CD8515912A7D260000A88139 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				CD8515922A7D261F00A88139 /* DogListAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		CD8515942A7ECF5200A88139 /* DogDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DogDetail;
+			sourceTree = "<group>";
+		};
+		CD8515952A81309F00A88139 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CD8515972A81360B00A88139 /* Extensions */,
+				CD8515962A81360400A88139 /* CustomViews */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CD8515962A81360400A88139 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				CD85159A2A81363F00A88139 /* BreedCollectionViewCell.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		CD8515972A81360B00A88139 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CD8515982A81362000A88139 /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +380,6 @@
 			files = (
 				CD1736372A73E941006B0A20 /* LaunchScreen.storyboard in Resources */,
 				CD1736342A73E941006B0A20 /* Assets.xcassets in Resources */,
-				CD17362F2A73E940006B0A20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +404,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD17362C2A73E940006B0A20 /* ViewController.swift in Sources */,
+				CD17362C2A73E940006B0A20 /* DogListViewController.swift in Sources */,
+				CD7C006E2A7AB7F300F4BBC3 /* DogListInteractor.swift in Sources */,
+				CD7C00732A7ABA0700F4BBC3 /* DogListDataSource.swift in Sources */,
+				CD7C00602A7AABD400F4BBC3 /* Dog.swift in Sources */,
 				CD1736282A73E940006B0A20 /* AppDelegate.swift in Sources */,
+				CD7C006C2A7AB6FA00F4BBC3 /* DogListPresenter.swift in Sources */,
+				CD8515992A81362000A88139 /* UIImageView+Extensions.swift in Sources */,
+				CD8515932A7D261F00A88139 /* DogListAssembler.swift in Sources */,
+				CD7C00752A7ACB1100F4BBC3 /* DogsRepository.swift in Sources */,
+				CD85159B2A81363F00A88139 /* BreedCollectionViewCell.swift in Sources */,
+				CD7C00702A7AB85900F4BBC3 /* DogListRouter.swift in Sources */,
 				CD17362A2A73E940006B0A20 /* SceneDelegate.swift in Sources */,
 				CD1736322A73E940006B0A20 /* TheDogAPI.xcdatamodeld in Sources */,
 			);
@@ -301,14 +453,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CD17362D2A73E940006B0A20 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD17362E2A73E940006B0A20 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CD1736352A73E941006B0A20 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +590,6 @@
 				INFOPLIST_FILE = TheDogAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,7 +617,6 @@
 				INFOPLIST_FILE = TheDogAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
