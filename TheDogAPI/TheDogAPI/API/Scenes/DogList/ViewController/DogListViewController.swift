@@ -138,10 +138,8 @@ extension DogListViewController: UISearchResultsUpdating {
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.item == dogs.count - 1 { // Assuming dogs is your data array
+        if indexPath.item == dogs.count - 1 {
             presenter?.loadMoreDogs()
         }
     }
-
-
 }

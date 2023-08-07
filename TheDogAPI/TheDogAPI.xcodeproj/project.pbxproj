@@ -25,6 +25,11 @@
 		CD8515932A7D261F00A88139 /* DogListAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8515922A7D261F00A88139 /* DogListAssembler.swift */; };
 		CD8515992A81362000A88139 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8515982A81362000A88139 /* UIImageView+Extensions.swift */; };
 		CD85159B2A81363F00A88139 /* BreedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD85159A2A81363F00A88139 /* BreedCollectionViewCell.swift */; };
+		CD8515AA2A815DD000A88139 /* DogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8515A92A815DD000A88139 /* DogDetailViewController.swift */; };
+		CD8515AC2A815DEA00A88139 /* DogListDetailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8515AB2A815DEA00A88139 /* DogListDetailAssembler.swift */; };
+		CD8515AE2A815E8C00A88139 /* DogDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8515AD2A815E8C00A88139 /* DogDetailInteractor.swift */; };
+		CD8515B02A815ED800A88139 /* DogDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8515AF2A815ED800A88139 /* DogDetailPresenter.swift */; };
+		CD8515B22A815FF400A88139 /* DogDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8515B12A815FF400A88139 /* DogDetailRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		CD8515922A7D261F00A88139 /* DogListAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListAssembler.swift; sourceTree = "<group>"; };
 		CD8515982A81362000A88139 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		CD85159A2A81363F00A88139 /* BreedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionViewCell.swift; sourceTree = "<group>"; };
+		CD8515A92A815DD000A88139 /* DogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailViewController.swift; sourceTree = "<group>"; };
+		CD8515AB2A815DEA00A88139 /* DogListDetailAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListDetailAssembler.swift; sourceTree = "<group>"; };
+		CD8515AD2A815E8C00A88139 /* DogDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailInteractor.swift; sourceTree = "<group>"; };
+		CD8515AF2A815ED800A88139 /* DogDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailPresenter.swift; sourceTree = "<group>"; };
+		CD8515B12A815FF400A88139 /* DogDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +160,7 @@
 			children = (
 				CD8515952A81309F00A88139 /* Utilities */,
 				CD7C00612A7AAC9700F4BBC3 /* DogList */,
+				CD85159C2A81591800A88139 /* DogListDetail */,
 				CD8515942A7ECF5200A88139 /* DogDetail */,
 			);
 			path = Scenes;
@@ -245,6 +256,11 @@
 		CD8515942A7ECF5200A88139 /* DogDetail */ = {
 			isa = PBXGroup;
 			children = (
+				CD8515A82A81598B00A88139 /* ViewController */,
+				CD8515A72A81598400A88139 /* Interactor */,
+				CD8515A62A81597E00A88139 /* Presenter */,
+				CD8515A52A81597900A88139 /* Router */,
+				CD8515A32A81596A00A88139 /* Assembler */,
 			);
 			path = DogDetail;
 			sourceTree = "<group>";
@@ -272,6 +288,101 @@
 				CD8515982A81362000A88139 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CD85159C2A81591800A88139 /* DogListDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CD8515A22A81594500A88139 /* ViewController */,
+				CD8515A12A81593E00A88139 /* Interactor */,
+				CD8515A02A81593900A88139 /* Presenter */,
+				CD85159F2A81593400A88139 /* Router */,
+				CD85159E2A81592C00A88139 /* DataSource */,
+				CD85159D2A81592700A88139 /* Assembler */,
+			);
+			path = DogListDetail;
+			sourceTree = "<group>";
+		};
+		CD85159D2A81592700A88139 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		CD85159E2A81592C00A88139 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		CD85159F2A81593400A88139 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CD8515A02A81593900A88139 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CD8515A12A81593E00A88139 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CD8515A22A81594500A88139 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CD8515A32A81596A00A88139 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				CD8515AB2A815DEA00A88139 /* DogListDetailAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		CD8515A52A81597900A88139 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CD8515B12A815FF400A88139 /* DogDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CD8515A62A81597E00A88139 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CD8515AF2A815ED800A88139 /* DogDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CD8515A72A81598400A88139 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CD8515AD2A815E8C00A88139 /* DogDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CD8515A82A81598B00A88139 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD8515A92A815DD000A88139 /* DogDetailViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +515,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8515AA2A815DD000A88139 /* DogDetailViewController.swift in Sources */,
+				CD8515AC2A815DEA00A88139 /* DogListDetailAssembler.swift in Sources */,
+				CD8515B22A815FF400A88139 /* DogDetailRouter.swift in Sources */,
 				CD17362C2A73E940006B0A20 /* DogListViewController.swift in Sources */,
 				CD7C006E2A7AB7F300F4BBC3 /* DogListInteractor.swift in Sources */,
 				CD7C00732A7ABA0700F4BBC3 /* DogListDataSource.swift in Sources */,
@@ -412,8 +526,10 @@
 				CD7C006C2A7AB6FA00F4BBC3 /* DogListPresenter.swift in Sources */,
 				CD8515992A81362000A88139 /* UIImageView+Extensions.swift in Sources */,
 				CD8515932A7D261F00A88139 /* DogListAssembler.swift in Sources */,
+				CD8515B02A815ED800A88139 /* DogDetailPresenter.swift in Sources */,
 				CD7C00752A7ACB1100F4BBC3 /* DogsRepository.swift in Sources */,
 				CD85159B2A81363F00A88139 /* BreedCollectionViewCell.swift in Sources */,
+				CD8515AE2A815E8C00A88139 /* DogDetailInteractor.swift in Sources */,
 				CD7C00702A7AB85900F4BBC3 /* DogListRouter.swift in Sources */,
 				CD17362A2A73E940006B0A20 /* SceneDelegate.swift in Sources */,
 				CD1736322A73E940006B0A20 /* TheDogAPI.xcdatamodeld in Sources */,

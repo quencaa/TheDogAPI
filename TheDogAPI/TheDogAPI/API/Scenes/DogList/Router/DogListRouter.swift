@@ -22,8 +22,9 @@ class DogListRouter: DogListRouterProtocol {
     }
     
     func showDetail(dog: Dog) {
-        //let detailViewController = detailAssembler.resolveViewController(route: route)
-        //navigationController.pushViewController(detailViewController, animated: true)
+        let detailViewController = DogDetailAssembler.resolveViewController(with: dog)
+        let navigationController = UINavigationController(rootViewController: detailViewController)
+        self.navigationController.present(navigationController, animated: true, completion: nil)
     }
     
     // Show alert in case of error

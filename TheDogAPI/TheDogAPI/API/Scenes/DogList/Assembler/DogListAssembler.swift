@@ -13,9 +13,7 @@ protocol DogListAssemblerProtocol {
 }
 
 class DogListAssembler: DogListAssemblerProtocol {
-    private static let mainStoryboard: String = "Main"
-    private static let homeViewControllerIdentifier = "Home"
-    
+
     static func resolveViewController() -> UIViewController {
         
         let viewController = DogListViewController()
