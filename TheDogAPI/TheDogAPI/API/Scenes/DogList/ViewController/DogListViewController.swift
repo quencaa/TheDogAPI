@@ -104,16 +104,7 @@ class DogListViewController: UICollectionViewController, DogListViewControllerPr
     
     @objc func refresh(_ sender: Any) {
         DispatchQueue.main.async { [weak self] in
-            self?.presenter?.fetchDogs { dogs, error in
-                if let error = error {
-                    print("Error: \(error)")
-                } else if let dogs = dogs {
-                    print("Fetched dogs: \(dogs)")
-                }
-            }
-
-            self?.collectionView.reloadData()
-            self?.refresh.endRefreshing()
+            self?.presenter?.fetchDogs(page: 1)
         }
     }
     
@@ -121,6 +112,7 @@ class DogListViewController: UICollectionViewController, DogListViewControllerPr
         self.dogs = dogs
         dataSource.updateDogs(dogs)
         self.collectionView.reloadData()
+        self.refresh.endRefreshing()
     }
     
     func showLoading(load: Bool) {
@@ -144,4 +136,12 @@ extension DogListViewController: UISearchResultsUpdating {
             collectionView.reloadData()
         }
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item == dogs.count - 1 { // Assuming dogs is your data array
+            presenter?.loadMoreDogs()
+        }
+    }
+
+
 }

@@ -8,13 +8,13 @@
 import UIKit
 
 protocol DogsRepositoryProtocol {
-    func fetchRandomDog(completion: @escaping ([Dog]?, Error?) -> Void)
+    func fetchRandomDog(page: Int, completion: @escaping ([Dog]?, Error?) -> Void)
 }
 
 class DogsRepository: DogsRepositoryProtocol {
     
-    func fetchRandomDog(completion: @escaping ([Dog]?, Error?) -> Void) {
-        let urlString = "https://api.thedogapi.com/v1/images/search?limit=10"
+    func fetchRandomDog(page: Int = 1, completion: @escaping ([Dog]?, Error?) -> Void) {
+        let urlString = "https://api.thedogapi.com/v1/images/search?limit=10&page=\(page)"
         guard let url = URL(string: urlString) else {
             print("Invalid URL")
             return

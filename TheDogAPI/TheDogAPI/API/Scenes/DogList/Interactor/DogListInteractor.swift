@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DogListInteractorProtocol {
-    func fetchDogs(completion: @escaping ([Dog]?, Error?) -> Void)
+    func fetchDogs(page: Int, completion: @escaping ([Dog]?, Error?) -> Void)
 }
 
 class DogListInteractor: DogListInteractorProtocol {
@@ -18,7 +18,7 @@ class DogListInteractor: DogListInteractorProtocol {
         self.repository = repository
     }
     
-    func fetchDogs(completion: @escaping ([Dog]?, Error?) -> Void) {
-        repository.fetchRandomDog(completion: completion)
+    func fetchDogs(page: Int, completion: @escaping ([Dog]?, Error?) -> Void) {
+        repository.fetchRandomDog(page: page, completion: completion)
     }
 }
