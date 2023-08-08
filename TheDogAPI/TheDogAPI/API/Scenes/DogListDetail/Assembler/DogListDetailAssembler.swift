@@ -16,7 +16,7 @@ class DogListDetailAssembler: DogListDetailAssemblerProtocol {
 
     static func resolveViewController() -> UIViewController {
         
-        let viewController = DogListDetailViewController()
+        let viewController = DogListDetailViewController(style: .insetGrouped)
         let navigationController = UINavigationController(rootViewController: viewController)
         let router = DogListDetailRouter(navigationController: navigationController)
 

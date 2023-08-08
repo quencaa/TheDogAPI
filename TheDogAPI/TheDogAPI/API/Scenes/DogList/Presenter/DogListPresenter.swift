@@ -38,9 +38,14 @@ class DogListPresenter: DogListPresenterProtocol {
     }
     
     func viewWillAppear() {
-        let filteredDogs = dogs?.filter { $0.breeds != nil } ?? []
+        setDogs()
+    }
+    
+    func setDogs() {
+        // Sort dogs alphabetically based on name
+        let filteredDogs = dogs?.filter { $0.breeds != nil || $0.breeds?.first?.name != nil } ?? []
         let dogByName = filteredDogs.sorted { ($0.breeds?.first?.name ?? "") < ($1.breeds?.first?.name ?? "") }
-        viewController.setDogs(dogs: dogs ?? [])
+        viewController.setDogs(dogs: dogByName)
     }
 
     func didSelectRow(at indexPath: IndexPath) {
@@ -60,7 +65,7 @@ class DogListPresenter: DogListPresenterProtocol {
             } else if let dogs = dogs {
                 print("Fetched dogs: \(dogs)")
                 self.dogs = dogs 
-                self.viewController.setDogs(dogs: dogs)
+                self.setDogs()
                 self.isLoading = false
                 self.viewController.showLoading(load: self.isLoading)
             }
@@ -74,7 +79,7 @@ class DogListPresenter: DogListPresenterProtocol {
             interactor.fetchDogs(page: currentPage, limit: 10, completion: { (newDogs, error) in
                 if let newDogs = newDogs {
                     self.dogs?.append(contentsOf: newDogs)
-                    self.viewController.setDogs(dogs: self.dogs ?? [])
+                    self.setDogs()
                 }
                 self.isFetchingMoreDogs = false
             })
