@@ -18,14 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
 
         self.window = UIWindow(windowScene: windowScene)
-
-        let dogListVC = DogListAssembler.resolveViewController()
-        let anotherVC = UIViewController()
-        let nav1 = DogListAssembler.resolveViewController()
-        let nav2 = DogListDetailAssembler.resolveViewController()
-
+        
+        let dogListImage = DogListAssembler.resolveViewController()
+        let dogListDetail = DogListDetailAssembler.resolveViewController()
+        
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [nav1, nav2]
+        
+        dogListImage.tabBarItem = UITabBarItem(title: "Dog Images", image: UIImage(systemName: "pawprint.circle"), selectedImage: nil)
+        dogListDetail.tabBarItem = UITabBarItem(title: "Dog List", image: UIImage(systemName: "list.bullet"), selectedImage: nil)
+        
+        tabBarController.viewControllers = [dogListImage, dogListDetail]
 
         self.window?.rootViewController = tabBarController
         self.window?.makeKeyAndVisible()
