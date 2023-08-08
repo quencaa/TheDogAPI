@@ -41,6 +41,8 @@ class DogListViewController: UICollectionViewController, DogListViewControllerPr
     
     var presenter: DogListPresenterProtocol?
     
+    private var userStartedDragging = false
+    
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
@@ -128,8 +130,13 @@ class DogListViewController: UICollectionViewController, DogListViewControllerPr
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter?.didSelectRow(at: indexPath)
     }
+    
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        userStartedDragging = true
+    }
+    
 }
-
+    // MARK: - UISearchResultsUpdating Delegate
 extension DogListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         if let searchText = searchController.searchBar.text {
@@ -139,7 +146,7 @@ extension DogListViewController: UISearchResultsUpdating {
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.item == dogs.count - 1 {
+        if userStartedDragging && indexPath.item == dogs.count - 1 {
             presenter?.loadMoreDogs()
         }
     }

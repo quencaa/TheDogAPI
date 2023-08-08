@@ -67,6 +67,7 @@ class DogDetailViewController: UIViewController, DogDetailViewControllerProtocol
     // MARK: UI Setup
     private func setupUI() {
         view.backgroundColor = .white
+        title = "Dog Details"
         
         view.addSubview(breedNameLabel)
         view.addSubview(breedCategoryLabel)
