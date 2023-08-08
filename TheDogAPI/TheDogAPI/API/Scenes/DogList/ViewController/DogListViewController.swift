@@ -29,7 +29,8 @@ class DogListViewController: UICollectionViewController, DogListViewControllerPr
     
     // Constants
     private enum Constants {
-        static let sceneTitle = "Search Results"
+        static let sceneTitle = "Dog Images"
+        static let searchTitle = "Search by name"
         static let pullToRefreshText = "Pull to refresh"
     }
     
@@ -45,7 +46,7 @@ class DogListViewController: UICollectionViewController, DogListViewControllerPr
         searchController.searchResultsUpdater = self
         searchController.searchBar.sizeToFit()
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = Constants.sceneTitle
+        searchController.searchBar.placeholder = Constants.searchTitle
         return searchController
     }()
     

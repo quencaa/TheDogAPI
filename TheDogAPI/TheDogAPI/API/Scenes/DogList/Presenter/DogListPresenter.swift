@@ -38,8 +38,8 @@ class DogListPresenter: DogListPresenterProtocol {
     }
     
     func viewWillAppear() {
-        // Sort dogs alphabetically based on name
-        let dogByName = dogs?.sorted { ($0.breeds?.first?.name ?? "") < ($1.breeds?.first?.name ?? "") } ?? []
+        let filteredDogs = dogs?.filter { $0.breeds != nil } ?? []
+        let dogByName = filteredDogs.sorted { ($0.breeds?.first?.name ?? "") < ($1.breeds?.first?.name ?? "") }
         viewController.setDogs(dogs: dogs ?? [])
     }
 
@@ -54,7 +54,7 @@ class DogListPresenter: DogListPresenterProtocol {
     func fetchDogs(page: Int) {
         isLoading = true
         viewController.showLoading(load: isLoading)
-        interactor.fetchDogs(page: page) { dogs, error in
+        interactor.fetchDogs(page: page, limit: 10) { dogs, error in
             if let error = error {
                 print("Error: \(error)")
             } else if let dogs = dogs {
@@ -71,7 +71,7 @@ class DogListPresenter: DogListPresenterProtocol {
         if !isFetchingMoreDogs {
             isFetchingMoreDogs = true
             currentPage += 1
-            interactor.fetchDogs(page: currentPage, completion: { (newDogs, error) in
+            interactor.fetchDogs(page: currentPage, limit: 10, completion: { (newDogs, error) in
                 if let newDogs = newDogs {
                     self.dogs?.append(contentsOf: newDogs)
                     self.viewController.setDogs(dogs: self.dogs ?? [])

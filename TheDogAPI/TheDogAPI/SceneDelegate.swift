@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let dogListVC = DogListAssembler.resolveViewController()
         let anotherVC = UIViewController()
         let nav1 = DogListAssembler.resolveViewController()
-        let nav2 = UINavigationController(rootViewController: UIViewController())
+        let nav2 = DogListDetailAssembler.resolveViewController()
 
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [nav1, nav2]

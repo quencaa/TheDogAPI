@@ -40,7 +40,7 @@ class DogDetailViewController: UIViewController, DogDetailViewControllerProtocol
     private let temperamentLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18)
-        label.numberOfLines = 0 // Allows wrapping
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -58,6 +58,7 @@ class DogDetailViewController: UIViewController, DogDetailViewControllerProtocol
     
     func setDog(dog: Dog) {
         breedNameLabel.text = "Name: \(dog.breeds?.first?.name ?? "")"
+        // TO DO: The Breed Category need to call another API
         breedCategoryLabel.text = "Category: \(dog.breeds?.first?.lifeSpan ?? "")"
         originLabel.text = "Origin: \(dog.breeds?.first?.origin ?? "")"
         temperamentLabel.text = "Temperament: \(dog.breeds?.first?.temperament ?? "")"
